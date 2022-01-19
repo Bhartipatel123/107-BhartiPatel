@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equip="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+
+    <script>
+        function f1() {
+            document.getElementById("p1").innerHTML = "hello";
+        }
+    </script>
+</head>
+
+<body>
+    <p id="Persondetails"></p>
+    <p id="Alldetails"></p>
+    <script>
+        let carname = "swift";
+        const person = {
+            fistname: "bharti",
+            city: "raigarh",
+            vehname: "activa",
+            fulldetails: function () {
+                return this.fistname + this.city + carname;
+
+            }
+        };
+        document.getElementById("Persondetails").innerHTML = 
+        person.fistname + " " + person.city + carname;
+        document.getElementById("Alldetails").innerHTML = 
+        person.fulldetails();
+
+    </script>
+</body>
+
+</html>

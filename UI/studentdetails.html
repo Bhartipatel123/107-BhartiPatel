@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equip="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+
+    <script>
+        function f1() {
+            document.getElementById("p1").innerHTML = "javascript";
+        }
+    </script>
+</head>
+
+<body>
+    <p id="studentdetails"></p>
+    <p id="alldetails"></p>
+    <script>
+        let grade = "A";
+        const student ={
+            fistname: "bharti",
+            lastname: "patel",
+            rollno: 5012,
+            sub1: "java",
+            sub2: "c++",
+            details:function(){
+                return this.fistname + this.lastname + this.rollno + this.sub1 + this.sub2 + grade;
+            }
+        };
+        document.getElementById("studentdetails").innerHTML = student.fistname + " " + 
+        student.lastname + " " + student.sub1 + " " + student.sub2 + " " + student.rollno + " " + grade;
+        document.getElementById("alldetails").innerHTML = student.fulldetails();
+
+    </script>
+</body>
+
+</html>
