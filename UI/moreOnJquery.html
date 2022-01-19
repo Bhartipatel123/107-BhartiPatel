@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        function sayhello() {
+            alert("hello ");
+        }
+        // $(document).ready(sayhello());
+        $(document).ready(
+            function () {
+                // sayhello();
+                // var text=$('#b1').text();
+                // alert("text()   " + text);
+                // var html=$('#p1').html();
+                // alert("html()   " + html);
+                // var val=$('#t1').val();
+                // alert(val);
+
+                $('#b1').click(function () {
+                    // var d=$('a').attr("href");
+                    // var d=$('p').text();
+                    // alert("site" +d1 + " is acceble on " + d);
+                    // var t = $('p').text();
+                    // alert("the paragraph contains the following" + t);
+                    // var r = $('p').attr("id");
+                    // alert("it is the paragraph with id" + r);
+                    $('a').attr('href', 'https://mail.yahoo.com');
+                    $('a').text('yahoo');
+                    $('p').text("changing the text of the area");
+                });
+
+
+            }
+
+        );
+    </script>
+</head>
+
+<body>
+    <input type="text" id="t1" value="Bharti" />
+    <p id="p1"> hello from <b> para </b>of the page</p>
+    <p id="p2"> hello from second <b> para </b>of the page</p>
+
+    <button id="b1">Click here</button>
+    <a href="https://www/goggle.com">Google</a>
+    <p contenteditable="true">
+        my name is bharti patel
+        im from raigarh chhatttisgarh.
+
+    </p>
+
+
+</body>
+
+</html>
