@@ -13,15 +13,14 @@ import com.collabera.account_management_system.entity.BillerProvider;
 @Repository
 public interface BillerProviderRepository extends JpaRepository<BillerProvider, Integer> {
 
-	BillerProvider findById(int id);
+	BillerProvider findBiller_providerById(int id);
 	
-	BillerProvider findByBillerRegister(int billerregisterid);
-	
-	BillerProvider findAllAccountById(int accountid);
 	
 	BillerProvider findByConsumerNumber(int consumeno);
 	  
 	BillerProvider findByTimestamp(long timestamp);
+
+	
 
 	
 	

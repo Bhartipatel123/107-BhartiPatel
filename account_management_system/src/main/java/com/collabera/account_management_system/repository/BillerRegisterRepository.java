@@ -13,9 +13,11 @@ public interface BillerRegisterRepository extends JpaRepository<BillerRegister, 
 
 	List<BillerRegister> findAll(); 
 
-	BillerRegister findById(int id);
+	BillerRegister findBiller_registerById(int id);
 	
 	BillerRegister findBiller_registerByBillerName(String billername);
+
+	
 
 	
 	

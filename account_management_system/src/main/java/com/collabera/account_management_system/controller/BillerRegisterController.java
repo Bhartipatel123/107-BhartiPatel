@@ -3,9 +3,12 @@ package com.collabera.account_management_system.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.collabera.account_management_system.service.BillerRegisterService;
@@ -38,5 +41,17 @@ public class BillerRegisterController{
 		BillerRegister billerregisterEntity = billerregisterService.findAllBillerRegistersByBillerName(billername);
 		return ResponseEntity.ok(billerregisterEntity);
 	}
+	
+//	@PostMapping("/billerregister")  	   
+//    public ResponseEntity<String> createNewRegister(@RequestBody BillerRegister billerRegister) {
+//    	String strCreateStatus="Biller Registered Succesfully";
+//    	registerService.createNewRegistry(billerRegister);
+//		return ResponseEntity.status(HttpStatus.CREATED).body(strCreateStatus);
+//    }
+	
+	
+	
+	
+	
 	
 }

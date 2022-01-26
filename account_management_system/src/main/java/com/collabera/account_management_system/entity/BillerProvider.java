@@ -28,16 +28,13 @@ public class BillerProvider {
 	@Column(name = "consumer_number")
 	private long consumerNumber;
 	
-	@Column(name ="timestamp")
+	@Column(name ="timestamp", nullable = true)
 	private long timestamp;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name ="bill_reg_id",nullable = false)
-	private BillerRegister billerRegister;
+	@Column(name = "account_id")
+	private long accountId;
 	
-	@ManyToOne(fetch = FetchType.LAZY  )
-	@JoinColumn(name = "account_id_fk",nullable = false)
-	private Account account;
-	
+	@Column(name = "biller_name ")
+	private String billerName ;
 }
 

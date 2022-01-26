@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.collabera.account_management_system.entity.BillerProvider;
+import com.collabera.account_management_system.entity.BillerRegister;
 import com.collabera.account_management_system.repository.BillerProviderRepository;
 
 
@@ -20,16 +21,10 @@ public class BillerProviderService {
 	}
 	
 	public BillerProvider findById(int id) {
-		return billerproviderRepository.findById(id);
+		return billerproviderRepository.findBiller_providerById(id);
 	}
 	
-	public BillerProvider findAllBillerRegisterById(int billerregisterid) {
-		return billerproviderRepository.findByBillerRegister(billerregisterid);
-	}
 
-	public BillerProvider findAllAccountById(int accountid) {
-		return billerproviderRepository.findAllAccountById(accountid);
-	}
 	
 	public BillerProvider findAllBillerProvidersByConsumerNo(int consumerno) {
 		return billerproviderRepository.findByConsumerNumber(consumerno);
@@ -37,6 +32,16 @@ public class BillerProviderService {
 
 	public BillerProvider findAllBillerProvidersByTimestamp(long timestamp) {
 		return billerproviderRepository.findByTimestamp(timestamp);
+	}
+
+	public BillerRegister createBillerProvider(String billername, int consumerNo) {
+		BillerProvider billerProvider = new BillerProvider();
+		billerProvider.setAccountId(Long.valueOf(1));
+		billerProvider.setBillerName(billername);
+		billerProvider.setConsumerNumber(consumerNo);
+		billerProvider.setTimestamp(1231243545);
+		billerproviderRepository.save(billerProvider);
+		return null;
 	}
 	
 }

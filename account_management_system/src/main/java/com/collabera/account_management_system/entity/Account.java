@@ -33,7 +33,7 @@ public class Account {
 	private int id;
 	
 	@Column(name = "account_number" , unique = true)
-	private int accountNumber;
+	private long accountNumber;
 
 	@Column(name = "balance")
 	private long balance;

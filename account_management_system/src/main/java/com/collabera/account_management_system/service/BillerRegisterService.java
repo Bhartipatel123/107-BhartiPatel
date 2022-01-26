@@ -20,7 +20,7 @@ public class BillerRegisterService {
 	
 
 	public BillerRegister findById(int id) {
-		return billerregisterRepository.findById(id);
+		return billerregisterRepository.findBiller_registerById(id);
 	}
 
 
