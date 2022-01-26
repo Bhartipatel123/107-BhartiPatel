@@ -1,0 +1,32 @@
+package com.collabera.account_management_system.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.collabera.account_management_system.entity.BillerRegister;
+import com.collabera.account_management_system.repository.BillerRegisterRepository;
+
+
+@Service
+public class BillerRegisterService {
+	
+	@Autowired
+	BillerRegisterRepository billerregisterRepository;
+
+	public List<BillerRegister> findAllBillerRegisters() {
+		return billerregisterRepository.findAll();
+	}
+	
+
+	public BillerRegister findById(int id) {
+		return billerregisterRepository.findById(id);
+	}
+
+
+	public BillerRegister findAllBillerRegistersByBillerName(String billername) {
+		return billerregisterRepository.findBiller_registerByBillerName(billername);
+	}
+
+	
+}
